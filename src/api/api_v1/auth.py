@@ -24,7 +24,6 @@ router = APIRouter(
 async def get_user(
         session: Annotated[AsyncSession, Depends(db_helper.session_getter)],
 ):
-    # users = await user_crud.get_all_users(session=session)
     users = await UserDao.find_all(session=session)
     return users
 
