@@ -107,7 +107,7 @@ async def login_user(
 
 
 @router.get("/current")
-async def get_choto(user: User = Depends(get_current_user)):
+async def get_something(user: User = Depends(get_current_user)):
     return user
 
 
